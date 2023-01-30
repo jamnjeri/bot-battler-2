@@ -67,10 +67,10 @@ function App() {
         //Check if bot has already been added or if bot of similar class has been added
 
         if (addBot.filter(e => e.id === id).length > 0) {
-          console.log("ID Present")
+          // console.log("ID Present")
         }
         else if (addBot.filter(e => e.bot_class === bot_class).length > 0) {
-          console.log("Bot_class Present")
+          // console.log("Bot_class Present")
         } 
         else {
           console.log("absent")
@@ -93,7 +93,7 @@ function App() {
     }
 
     function handleDischarge(id){
-      console.log(id)
+      // console.log(id)
       fetch(`${url}/${id}`, {
         method: "DELETE"
       })
@@ -104,7 +104,7 @@ function App() {
 
       if (category !== 'original'){
         if (category === 'health'){
-          console.log("health")
+          // console.log("health")
             // Sort Functionality
           let sortArray = data
           sortArray.sort((a,b) => (a.health < b.health) ? 1 : ((b.health < a.health) ? -1 : 0));
@@ -114,7 +114,7 @@ function App() {
           return data
         }
         else if (category === 'damage'){
-          console.log("damage")
+          // console.log("damage")
           // Sort Functionality
           let sortArray = data
           sortArray.sort((a,b) => (a.damage < b.damage) ? 1 : ((b.damage < a.damage) ? -1 : 0));
@@ -123,7 +123,7 @@ function App() {
           return data
         }
         else if (category === 'armor'){
-          console.log("armor")
+          // console.log("armor")
           // Sort Functionality
           let sortArray = data
           sortArray.sort((a,b) => (a.armor < b.armor) ? 1 : ((b.armor < a.armor) ? -1 : 0));
@@ -133,7 +133,7 @@ function App() {
         }
       }
       else{
-        console.log("Default")
+        // console.log("Default")
         setData(original)
         return data
       }
